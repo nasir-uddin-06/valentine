@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <div id="music-overlay"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; justify-content: center; align-items: center; color: white; flex-direction: column; cursor: pointer;">
+        <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 20px; color: #ff4d6d;">For My
+            Valentine</h1>
+        <p style="font-family: var(--font-body); font-size: 1.5rem; animation: pulse 1.5s infinite;">Click anywhere to
+            start &hearts;</p>
+    </div>
+
+    <div class="landing-page">
+        <div class="hero-section">
+            <div class="hero-image-container">
+                <!-- Using hero-img.jpeg as the new hero image -->
+                <img src="assets/images/hero-img.jpeg" alt="Us" class="hero-image">
+            </div>
+        </div>
+
+        <div class="hero-text">
+            <h1>Happy Valentine's Day</h1>
+            <p class="quote">
+                "In all the world, there is no heart for me like yours. <br>
+                In all the world, there is no love for you like mine."
+            </p>
+
+            <a href="pages/memory1.html" class="enter-btn" onclick="enterSite(event)">Open My Heart</a>
+        </div>
+    </div>
+
+    <!-- Audio element for background music -->
+    <!-- Using the first music track -->
+    <!-- Audio element for background music -->
+    <!-- Using the first music track -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/landing-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

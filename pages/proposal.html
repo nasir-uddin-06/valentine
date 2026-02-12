@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <div class="proposal-container">
+        <h1 class="proposal-header">Will you be my Valentine?</h1>
+
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">YES &hearts;</button>
+            <button class="no-btn" onclick="moveButton(this)">No</button>
+        </div>
+    </div>
+
+    <div id="success-message">
+        <h1 style="font-family: var(--font-heading); font-size: 4rem; color: #ff4d6d; margin-bottom: 20px;">I Knew It!
+            &hearts;</h1>
+        <p
+            style="font-family: var(--font-body); font-size: 2rem; text-align: center; max-width: 800px; line-height: 1.5;">
+            "We will stay forever."
+        </p>
+        <p style="margin-top: 30px; font-size: 1.2rem;">(You are stuck with me now!)</p>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="../assets/music/music3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Check if proposal was already accepted and page is being refreshed
+        if (localStorage.getItem('proposalAccepted') === 'true') {
+            // Clear the flag and redirect to landing page
+            localStorage.removeItem('proposalAccepted');
+            window.location.href = '../index.html';
+        }
+
+        const audio = document.getElementById('bg-music');
+        if (audio) {
+            audio.volume = 0.5;
+            audio.play().catch(e => console.log("Autoplay blocked"));
+        }
+    </script>
+</body>
+
+</html>

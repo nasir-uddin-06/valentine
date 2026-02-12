@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories - Part 3</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <nav style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+        <a href="memory2.html" class="nav-link">&larr; Back</a>
+    </nav>
+
+    <div class="diary-container">
+        <h2
+            style="text-align: center; font-family: var(--font-heading); font-size: 3rem; margin: 5rem 0; color: var(--accent-color); animation: pulseText 3s infinite alternate;">
+            Endless Love</h2>
+
+        <div class="diary-entries">
+            <!-- First 10 entries moved to Memory 1 and 2 -->
+            <div class="diary-entry rotate-right">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.43.59 PM.jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Magic"</p>
+            </div>
+            <div class="diary-entry rotate-left">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.44.05 PM.jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Dream"</p>
+            </div>
+            <div class="diary-entry rotate-right">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.44.06 PM.jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Life"</p>
+            </div>
+            <div class="diary-entry rotate-left">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.44.10 PM.jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Love You"</p>
+            </div>
+            <div class="diary-entry rotate-right">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.44.13 PM (1).jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Inseparable"</p>
+            </div>
+            <div class="diary-entry rotate-left">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.44.13 PM.jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Always"</p>
+            </div>
+            <div class="diary-entry rotate-right">
+                <div class="photo-frame">
+                    <img src="../assets/images/WhatsApp Image 2026-02-11 at 8.44.14 PM.jpeg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Eternity"</p>
+            </div>
+            <div class="diary-entry rotate-left">
+                <div class="photo-frame">
+                    <img src="../assets/images/image (11).jpg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Us Forever"</p>
+            </div>
+            <div class="diary-entry rotate-right">
+                <div class="photo-frame">
+                    <img src="../assets/images/image (12).jpg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"My Love"</p>
+            </div>
+            <div class="diary-entry rotate-left">
+                <div class="photo-frame">
+                    <img src="../assets/images/image (13).jpg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Only You"</p>
+            </div>
+            <div class="diary-entry rotate-right">
+                <div class="photo-frame">
+                    <img src="../assets/images/hero.jpg">
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Start"</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="proposal.html" class="enter-btn">One Last Thing... &hearts;</a>
+        </div>
+    </div>
+
+    <!-- Audio - Track 3 -->
+    <audio id="bg-music" autoplay loop>
+        <source src="../assets/music/music3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="../js/script.js"></script>
+    <script>
+        const audio = document.getElementById('bg-music');
+        if (audio) {
+            audio.volume = 0.5;
+            audio.play().catch(e => console.log("Autoplay blocked, waiting for interaction"));
+        }
+    </script>
+</body>
+
+</html>
