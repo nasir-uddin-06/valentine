@@ -122,7 +122,10 @@ function enterSite(e) {
 // Auto-scroll for memory pages
 document.addEventListener('DOMContentLoaded', () => {
     // Check if auto-scroll is disabled for this specific page
-    if (window.location.pathname.includes('memory') && typeof autoScrollDisabled === 'undefined') {
+    // Exclude memory4.html specifically
+    if (window.location.pathname.includes('memory') &&
+        !window.location.pathname.includes('memory4') &&
+        !window.autoScrollDisabled) {
         startAutoScroll();
     }
 });

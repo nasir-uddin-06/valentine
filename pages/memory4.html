@@ -46,11 +46,24 @@
     </div>
 
     <script>
-        // Disable auto-scroll for this page - must be declared before script.js loads
-        const autoScrollDisabled = true;
+        // Disable auto-scroll for this page - must be globally accessible
+        window.autoScrollDisabled = true;
     </script>
     <script src="../js/script.js"></script>
     <script>
+        // Explicitly stop any auto-scroll that might have started
+        document.addEventListener('DOMContentLoaded', () => {
+            // Clear any intervals that might be running
+            const highestId = window.setTimeout(() => {
+                for (let i = highestId; i >= 0; i--) {
+                    window.clearInterval(i);
+                }
+            }, 0);
+
+            // Prevent any scrolling
+            window.scrollTo(0, 0);
+        });
+
         // Attempt to play video with sound
         const video = document.querySelector('video');
         if (video) {
