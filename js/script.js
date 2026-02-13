@@ -121,7 +121,8 @@ function enterSite(e) {
 
 // Auto-scroll for memory pages
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.location.pathname.includes('memory')) {
+    // Check if auto-scroll is disabled for this specific page
+    if (window.location.pathname.includes('memory') && typeof autoScrollDisabled === 'undefined') {
         startAutoScroll();
     }
 });

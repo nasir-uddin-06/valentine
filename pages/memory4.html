@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories - Part 4</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <!-- Navigation -->
+    <nav style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+        <a href="memory3.html" class="nav-link">&larr; Back</a>
+    </nav>
+
+    <div class="diary-container">
+        <h2
+            style="text-align: center; font-family: var(--font-heading); font-size: 3rem; margin: 5rem 0; color: var(--accent-color); animation: pulseText 3s infinite alternate;">
+            Our Special Moment</h2>
+
+        <div class="diary-entries">
+            <!-- Video Entry -->
+            <div class="diary-entry" style="max-width: 600px; margin: 0 auto;">
+                <div class="photo-frame"
+                    style="padding: 20px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(255, 77, 109, 0.3); border: 5px solid white; transform: rotate(-1deg);">
+                    <video autoplay loop controls style="width: 100%; border-radius: 10px; display: block;"
+                        controlsList="nodownload">
+                        <source src="../assets/videos/WhatsApp Video 2026-02-13 at 6.30.53 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="tape"></div>
+                </div>
+                <p class="caption">"Forever in my heart"</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="proposal.html" class="enter-btn">One Last Thing... &hearts;</a>
+        </div>
+    </div>
+
+    <script>
+        // Disable auto-scroll for this page - must be declared before script.js loads
+        const autoScrollDisabled = true;
+    </script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Attempt to play video with sound
+        const video = document.querySelector('video');
+        if (video) {
+            video.muted = false; // Ensure video is not muted
+            video.volume = 0.7; // Set volume
+            video.play().catch(e => console.log("Autoplay blocked, user interaction needed"));
+        }
+    </script>
+    <style>
+        /* Mobile responsive styles for video frame */
+        @media (max-width: 768px) {
+            .diary-entry {
+                max-width: 95% !important;
+                margin: 0 auto !important;
+            }
+
+            .photo-frame {
+                padding: 10px !important;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+                margin: 3rem 0 !important;
+            }
+        }
+    </style>
+</body>
+
+</html>
